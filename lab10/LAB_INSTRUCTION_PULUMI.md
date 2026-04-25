@@ -444,7 +444,7 @@ pulumi.export("bucket_arns", {r: b.bucket.arn for r, b in zip(regions, buckets)}
 5. **Document your deployment**: save the `pulumi up` output.
 6. Run `pulumi destroy`.
 
-## Lambda with inline handler
+## Lambda with inline handler (Optional for aws academy users - requires personal AWS account) 
 
 This is where Pulumi's Python-native approach has a genuine advantage over Terraform. You can
 write a Lambda handler function and deploy it in the same Python file, using
@@ -503,7 +503,7 @@ aws lambda invoke \
     response.json && cat response.json
 ```
 
-### Exercise 5 - Lambda
+### Exercise 5 - Lambda (Optional for aws academy users - requires personal AWS account)
 
 1. Modify the handler to accept a `name` parameter from the event body and return
    `"Hello, {name}!"`. If `name` is not in the event, fall back to `"World"`.
